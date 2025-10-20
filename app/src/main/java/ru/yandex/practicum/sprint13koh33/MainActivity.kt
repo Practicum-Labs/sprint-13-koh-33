@@ -190,6 +190,11 @@ class MainActivity : AppCompatActivity() {
                 ScreenMode.CART -> {
                     binding.catalogContainer.visibility = View.GONE
                     binding.cartContainer.visibility = View.VISIBLE
+                    binding.cartEmptyTitle.visibility = if (cartItems.isEmpty()){
+                        View.VISIBLE
+                    } else {
+                        View.GONE
+                    }
                 }
             }
             currentScreenMode = newScreenMode
